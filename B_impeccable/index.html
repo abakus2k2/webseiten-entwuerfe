@@ -1,0 +1,109 @@
+<!doctype html>
+<!-- Herleitung (Gasthaus Linde, erfundene Daten): Speisekarte, weil ein Restaurant seine Karte zeigt · Lindenblätter, weil der Name Linde · weinrot, Wein und Tafelkultur · Fraunces, gedruckte Speisekarte. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für Gasthaus Linde in Musterstadt: Öffnungszeiten, Telefon und Anfahrt.">
+<title>Gasthaus Linde, Musterstadt (Entwurf)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+  <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20(Code%20K7MP3XRT)">Ja, ich möchte diese Seite</a>
+</div>
+
+<main class="karte">
+  <div class="blatt">
+
+    <header class="kopf">
+      <svg class="blatt-zeichen" viewBox="0 0 44 46" width="44" height="46" aria-hidden="true" focusable="false"><defs><g id="blatt" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 38 C9 30 3 21 6 13 C8 8 14 7 18 11 C19 12 20 13 20 13 C22 8 29 6 34 10 C38 15 35 25 24 36 Z"/><path d="M20 38 L21 13 M20 31 L11 20 M21 28 L31 17 M20 22 L14 14 M21 21 L28 12"/><path d="M20 38 C20 41 22 43 25 43"/></g></defs><use href="#blatt" transform="rotate(-18 22 23)"/></svg>
+      <h1>Gasthaus Linde</h1>
+      <p class="ort">Restaurant in Musterstadt</p>
+    </header>
+
+    <p class="jetzt" id="jetzt" hidden></p>
+
+    <div class="knoepfe">
+      <a class="btn btn--primary" href="tel:+49711123456">Anrufen: 0711 / 12 34 56</a>
+      <a class="btn btn--secondary" href="https://maps.google.com/?cid=0">Anfahrt</a>
+    </div>
+
+    <section class="zeiten" aria-labelledby="h-zeiten">
+      <h2 id="h-zeiten">Öffnungszeiten</h2>
+      <dl class="woche">
+        <div data-tag="1"><dt>Montag</dt><dd class="zu">Ruhetag</dd></div>
+        <div data-tag="2"><dt>Dienstag</dt><dd>11:30 bis 14:00<br>17:30 bis 22:00</dd></div>
+        <div data-tag="3"><dt>Mittwoch</dt><dd>11:30 bis 14:00<br>17:30 bis 22:00</dd></div>
+        <div data-tag="4"><dt>Donnerstag</dt><dd>11:30 bis 14:00<br>17:30 bis 22:00</dd></div>
+        <div data-tag="5"><dt>Freitag</dt><dd>11:30 bis 14:00<br>17:30 bis 23:00</dd></div>
+        <div data-tag="6"><dt>Samstag</dt><dd>17:30 bis 23:00</dd></div>
+        <div data-tag="0"><dt>Sonntag</dt><dd>11:30 bis 15:00</dd></div>
+      </dl>
+    </section>
+
+    <div class="muster" aria-hidden="true"><svg viewBox="0 0 352 46" focusable="false"><use href="#blatt" transform="translate(0 0) rotate(-28 22 23)"/><use href="#blatt" transform="translate(44 0) rotate(28 22 23)"/><use href="#blatt" transform="translate(88 0) rotate(-28 22 23)"/><use href="#blatt" transform="translate(132 0) rotate(28 22 23)"/><use href="#blatt" transform="translate(176 0) rotate(-28 22 23)"/><use href="#blatt" transform="translate(220 0) rotate(28 22 23)"/><use href="#blatt" transform="translate(264 0) rotate(-28 22 23)"/><use href="#blatt" transform="translate(308 0) rotate(28 22 23)"/></svg></div>
+
+    <section class="platz" aria-labelledby="h-vor">
+      <h2 id="h-vor">Über uns</h2>
+      <div class="platzhalter">
+        <p><strong class="art">Platzhalter:</strong> Hier stellen Sie Ihr Haus in zwei, drei Sätzen vor. Schicken Sie uns einfach Stichworte.</p>
+      </div>
+    </section>
+
+    <section class="platz" aria-labelledby="h-karte">
+      <h2 id="h-karte">Speisekarte</h2>
+      <div class="platzhalter">
+        <p><strong class="art">Platzhalter:</strong> Ihre Speisekarte kommt hierher. Ein Handyfoto der Karte genügt.</p>
+      </div>
+    </section>
+
+    <section class="adresse" aria-labelledby="h-adr">
+      <h2 id="h-adr">Adresse</h2>
+      <p>Hauptstraße 1<br>12345 Musterstadt</p>
+      <a class="btn btn--secondary" href="https://maps.google.com/?cid=0">Anfahrt</a>
+    </section>
+
+    <section class="angebot" aria-labelledby="h-ang">
+      <h2 id="h-ang">Diese Seite für Ihr Gasthaus</h2>
+      <p class="preiszeile"><span>Ein Jahr online</span><span class="preis">99 €</span></p>
+      <ul>
+        <li>Eine Änderungsrunde ist dabei, zum Beispiel Ihre Fotos und Ihre Karte.</li>
+        <li>Sie müssen nichts einrichten.</li>
+      </ul>
+      <p class="loesch">Ohne Antwort löschen wir diesen Entwurf am 18. Dezember 2026.</p>
+      <a class="btn btn--primary" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20(Code%20K7MP3XRT)">Ja, ich möchte diese Seite</a>
+    </section>
+
+  </div>
+</main>
+
+<footer class="fuss">
+  <p>Diese Seite ist ein Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+  <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+</footer>
+
+<script>
+(function () {
+  var z = {1: [], 2: [["11:30","14:00"],["17:30","22:00"]], 3: [["11:30","14:00"],["17:30","22:00"]], 4: [["11:30","14:00"],["17:30","22:00"]], 5: [["11:30","14:00"],["17:30","23:00"]], 6: [["17:30","23:00"]], 0: [["11:30","15:00"]]};
+  var d = new Date(), t = d.getDay(), m = d.getHours() * 60 + d.getMinutes();
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  var heute = z[t], txt;
+  if (!heute.length) { txt = "Heute Ruhetag"; }
+  else {
+    var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+    var naechst = heute.filter(function (f) { return m < min(f[0]); })[0];
+    if (offen) txt = "Jetzt geöffnet bis " + offen[1] + " Uhr";
+    else if (naechst) txt = "Heute geöffnet ab " + naechst[0] + " Uhr";
+    else txt = "Heute schon geschlossen";
+  }
+  var el = document.getElementById("jetzt"); el.textContent = txt; el.hidden = false;
+  var row = document.querySelector('.woche div[data-tag="' + t + '"]');
+  if (row) { row.className = "heute"; row.setAttribute("aria-current", "date"); }
+})();
+</script>
+</body>
+</html>

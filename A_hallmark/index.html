@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- Herleitung (Gasthaus Linde, erfundene Daten): Aushang, weil ein Gasthaus seine Zeiten an die Tür hängt · Ähren, weil Gasthausküche (Brot, Bier); aus der Art des Hauses, nicht aus dem Namen · ziegel, warm wie Backstein und Wirtshaus · Literata, Aushang und Zeitung. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für Gasthaus Linde in Musterstadt: Öffnungszeiten, Telefon und Anfahrt.">
+<title>Gasthaus Linde, Musterstadt (Entwurf)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <div class="wrap">
+    <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+    <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20(Code%20K7MP3XRT)">Ja, ich möchte diese Seite</a>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="aushang">
+  <div class="aushang__kopf">
+  <header class="kopf">
+    <h1>Gasthaus Linde</h1>
+    <p class="ort">Restaurant in Musterstadt</p>
+  </header>
+  <hr class="rule--double">
+  <p class="jetzt" id="jetzt" hidden></p>
+
+  <div class="knoepfe">
+    <a class="btn btn--primary" href="tel:+49711123456">Anrufen: 0711 / 12 34 56</a>
+    <a class="btn btn--secondary" href="https://maps.google.com/?cid=0">Anfahrt</a>
+  </div>
+  </div>
+
+  <section class="zeiten" aria-labelledby="h-zeiten">
+    <h2 id="h-zeiten">Öffnungszeiten</h2>
+    <table class="woche">
+      <tbody>
+        <tr data-tag="1"><th scope="row">Montag</th><td class="zu">Ruhetag</td></tr>
+        <tr data-tag="2"><th scope="row">Dienstag</th><td>11:30 bis 14:00<br>17:30 bis 22:00</td></tr>
+        <tr data-tag="3"><th scope="row">Mittwoch</th><td>11:30 bis 14:00<br>17:30 bis 22:00</td></tr>
+        <tr data-tag="4"><th scope="row">Donnerstag</th><td>11:30 bis 14:00<br>17:30 bis 22:00</td></tr>
+        <tr data-tag="5"><th scope="row">Freitag</th><td>11:30 bis 14:00<br>17:30 bis 23:00</td></tr>
+        <tr data-tag="6"><th scope="row">Samstag</th><td>17:30 bis 23:00</td></tr>
+        <tr data-tag="0"><th scope="row">Sonntag</th><td>11:30 bis 15:00</td></tr>
+      </tbody>
+    </table>
+  </section>
+  </div>
+
+  <section class="bild" aria-label="Bild">
+    <div class="muster" aria-hidden="true">
+      <svg viewBox="0 0 300 66" focusable="false"><defs><path id="korn" d="M0 0 C5 -5 5 -13 0 -18 C-5 -13 -5 -5 0 0Z"/><g id="aehre"><path class="l1" d="M0 4 V-40" fill="none" stroke-width="1.5"/><use href="#korn" transform="translate(0 -16) rotate(-38)"/><use href="#korn" transform="translate(0 -16) rotate(38)"/><use href="#korn" transform="translate(0 -27) rotate(-38)"/><use href="#korn" transform="translate(0 -27) rotate(38)"/><use href="#korn" transform="translate(0 -38) rotate(-38)"/><use href="#korn" transform="translate(0 -38) rotate(38)"/><use href="#korn" transform="translate(0 -50)"/></g></defs><path class="l2" d="M0 63 H300" fill="none" stroke-width="1.5"/><use href="#aehre" x="14.0" y="62"/><use href="#aehre" x="38.5" y="62"/><use href="#aehre" x="63.0" y="62"/><use href="#aehre" x="87.5" y="62"/><use href="#aehre" x="112.0" y="62"/><use href="#aehre" x="136.5" y="62"/><use href="#aehre" x="161.0" y="62"/><use href="#aehre" x="185.5" y="62"/><use href="#aehre" x="210.0" y="62"/><use href="#aehre" x="234.5" y="62"/><use href="#aehre" x="259.0" y="62"/><use href="#aehre" x="283.5" y="62"/></svg>
+    </div>
+  </section>
+
+  <div class="platz-paar">
+  <section aria-labelledby="h-vor">
+    <h2 id="h-vor">Über uns</h2>
+    <div class="platzhalter">
+      <p class="art">Platzhalter</p>
+      <p>Hier stellen Sie Ihr Haus in zwei, drei Sätzen vor. Schicken Sie uns einfach Stichworte.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-karte">
+    <h2 id="h-karte">Speisekarte</h2>
+    <div class="platzhalter">
+      <p class="art">Platzhalter</p>
+      <p>Ihre Speisekarte kommt hierher. Ein Handyfoto der Karte genügt.</p>
+    </div>
+  </section>
+  </div>
+
+  <section class="adresse" aria-labelledby="h-adr">
+    <h2 id="h-adr">Adresse</h2>
+    <p>Hauptstraße 1<br>12345 Musterstadt</p>
+    <a class="btn btn--secondary" href="https://maps.google.com/?cid=0">Anfahrt</a>
+  </section>
+</main>
+
+<section class="angebot" aria-labelledby="h-ang">
+  <div class="wrap">
+    <h2 id="h-ang">Diese Seite für Ihr Gasthaus</h2>
+    <p class="preis">99 €</p>
+    <ul>
+      <li>Ihre Seite ist ein Jahr lang online.</li>
+      <li>Eine Änderungsrunde ist dabei, zum Beispiel Ihre Fotos und Ihre Karte.</li>
+      <li>Sie müssen nichts einrichten.</li>
+    </ul>
+    <p class="loesch">Ohne Antwort löschen wir diesen Entwurf am 18. Dezember 2026.</p>
+    <a class="btn btn--primary" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20(Code%20K7MP3XRT)">Ja, ich möchte diese Seite</a>
+  </div>
+</section>
+
+<footer class="fuss">
+  <div class="wrap">
+    <p>Diese Seite ist ein Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+    <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var z = {1: [], 2: [["11:30","14:00"],["17:30","22:00"]], 3: [["11:30","14:00"],["17:30","22:00"]], 4: [["11:30","14:00"],["17:30","22:00"]], 5: [["11:30","14:00"],["17:30","23:00"]], 6: [["17:30","23:00"]], 0: [["11:30","15:00"]]};
+  var d = new Date(), t = d.getDay(), m = d.getHours() * 60 + d.getMinutes();
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  var heute = z[t], txt;
+  if (!heute.length) { txt = "Heute Ruhetag"; }
+  else {
+    var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+    var naechst = heute.filter(function (f) { return m < min(f[0]); })[0];
+    if (offen) txt = "Jetzt geöffnet bis " + offen[1] + " Uhr";
+    else if (naechst) txt = "Heute geöffnet ab " + naechst[0] + " Uhr";
+    else txt = "Heute schon geschlossen";
+  }
+  var el = document.getElementById("jetzt"); el.textContent = txt; el.hidden = false;
+  var row = document.querySelector('.woche tr[data-tag="' + t + '"]'); if (row) { row.className = "heute"; row.querySelector("th").insertAdjacentHTML("beforeend", ' <span class="heute__marke">heute</span>'); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Entwurf B, Impeccable: Speisekarte. Farbfamilie weinrot (WS-35), Schrift Fraunces (WS-34), keine Fotos (WS-31). */
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --grund: #FFFFFF;
+  --text: #1F1A17;
+  --akzent: #8C2F39;
+  --flaeche: #F4ECE9;
+  --schrift: "Fraunces", Georgia, serif;
+  --abstand: 1.5rem;
+  --abstand-gross: 2.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--grund);
+  color: var(--text);
+  font-family: var(--schrift);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  text-align: center;
+}
+html { caret-color: var(--akzent); scrollbar-color: var(--akzent) var(--flaeche); }
+::selection { background: var(--akzent); color: var(--grund); }
+a { color: var(--akzent); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 3px solid var(--akzent); outline-offset: 3px; }
+
+/* Band: feste Zeilen laut Konzept § 8, in Textfarbe */
+.band {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--text); color: var(--grund);
+  font-size: 0.9375rem;
+}
+.band p { margin: 0; }
+.band a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 3rem; padding: 0 1rem;
+  background: var(--grund); color: var(--text);
+  font-weight: 700; text-decoration: none;
+}
+.band a:focus-visible { outline-color: var(--grund); }
+
+/* Das Blatt: Doppelrahmen wie auf der Karte */
+.karte { max-width: 42rem; margin: 0 auto; padding: 1rem 0.75rem 0; }
+.blatt {
+  padding: var(--abstand) 1rem var(--abstand-gross);
+  border: 1px solid var(--akzent);
+  outline: 3px double var(--akzent);
+  outline-offset: -8px;
+  padding-block: 2rem var(--abstand-gross);
+}
+
+h1, h2 { font-weight: 700; margin: 0; text-wrap: balance; overflow-wrap: break-word; }
+h1 { font-size: clamp(2.5rem, 9vw + 0.5rem, 3.5rem); line-height: 1.05; color: var(--text); }
+h2 { font-size: 1.625rem; line-height: 1.2; font-weight: 600; color: var(--akzent); margin-bottom: 1rem; }
+p { margin: 0; }
+.kopf { padding: 0.5rem 0 1rem; }
+.blatt-zeichen { color: var(--akzent); display: block; margin: 0 auto 0.5rem; }
+.ort { margin-top: 0.5rem; }
+
+.jetzt {
+  margin: 0.5rem auto 0; padding: 0.75rem 0;
+  border-block: 1px solid var(--akzent);
+  font-size: 1.5rem; line-height: 1.25; font-weight: 700; color: var(--akzent);
+  max-width: 28rem; text-wrap: balance;
+}
+
+.knoepfe { display: grid; gap: 0.75rem; margin: 1.5rem auto 0; max-width: 28rem; }
+.btn {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 3.25rem; padding: 0 1.25rem;
+  font-family: inherit; font-size: 1.125rem; font-weight: 700;
+  text-decoration: none; border: 2px solid var(--akzent);
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+.btn--primary { background: var(--akzent); color: var(--grund); }
+.btn--secondary { background: var(--grund); color: var(--akzent); }
+.btn--primary:hover { background: var(--text); border-color: var(--text); }
+.btn--secondary:hover { background: var(--flaeche); }
+.btn:active { transform: translateY(1px); }
+
+section { padding-top: var(--abstand-gross); }
+
+/* Zeiten als Kartenzeilen mit Punktlinie */
+.woche { margin: 0 auto; max-width: 30rem; text-align: left; }
+.woche > div {
+  display: flex; align-items: first baseline; gap: 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+.woche dt { display: flex; flex: 1; align-items: baseline; gap: 0.5rem; font-weight: 600; }
+.woche dt::after { content: ""; flex: 1; border-bottom: 2px dotted var(--text); min-width: 1rem; transform: translateY(-0.2em); }
+.woche dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.woche .zu { font-weight: 400; }
+.woche .heute { background: var(--flaeche); box-shadow: inset 0 -3px 0 var(--akzent); }
+.woche .heute dt, .woche .heute dd { font-weight: 700; color: var(--akzent); }
+
+/* Muster: gezeichnete Zierleiste aus Lindenblättern (WS-31, keine Fotos) */
+.muster { color: var(--akzent); border-block: 1px solid var(--akzent); margin-top: var(--abstand-gross); }
+.muster svg { display: block; width: 100%; height: auto; max-width: 30rem; margin: 0 auto; padding: 0.25rem 0; }
+
+.platzhalter { border: 2px dashed var(--akzent); background: var(--flaeche); padding: 1rem; max-width: 30rem; margin: 0 auto; }
+.platzhalter .art { font-weight: 700; color: var(--akzent); }
+
+.adresse .btn { margin: 1rem auto 0; max-width: 20rem; }
+
+.angebot .preiszeile {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem;
+  max-width: 30rem; margin: 0 auto; text-align: left;
+}
+.angebot .preiszeile span:first-child { display: flex; flex: 1; align-items: baseline; gap: 0.5rem; font-weight: 600; }
+.angebot .preiszeile span:first-child::after { content: ""; flex: 1; min-width: 1rem; border-bottom: 2px dotted var(--text); transform: translateY(-0.2em); }
+.preis { font-size: 2.5rem; line-height: 1; font-weight: 700; color: var(--akzent); }
+.angebot ul { list-style: none; padding: 0; margin: 1rem auto 0; max-width: 30rem; }
+.angebot li { padding: 0.25rem 0; }
+.loesch { margin: 1rem auto 1.5rem; max-width: 30rem; }
+.angebot .btn { max-width: 28rem; margin: 0 auto; }
+
+.fuss { padding: 1.5rem 1rem 2rem; font-size: 0.9375rem; max-width: 42rem; margin: 0 auto; }
+.fuss p + p { margin-top: 0.25rem; }
+
+@media (min-width: 40rem) {
+  .knoepfe { grid-template-columns: auto auto; justify-content: center; max-width: none; }
+  .btn { white-space: nowrap; }
+  .blatt { padding-inline: 2.5rem; }
+}
+@media (min-width: 64rem) {
+  .karte { padding-top: 2rem; }
+  h2 { font-size: 1.875rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:active { transform: none; }
+}

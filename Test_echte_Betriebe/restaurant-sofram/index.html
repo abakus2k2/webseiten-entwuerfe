@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- Herleitung (Test an echten Daten aus Google Maps, Stand 2026-11-19): Karotuch mit Teeglas: Sofra = gedeckter Tisch, türkische Küche; Familie oliv_nacht (dunkel, Abendbetrieb bis 23 Uhr), Literata. Zeitlogik nach Zweitmeinung Codex korrigiert (2026-11-20). Familie und Schrift aus WS-34/35, Muster gezeichnet (WS-31). -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für Restaurant Sofram in Musterstadt: Öffnungszeiten, Telefon und Anfahrt.">
+<title>Restaurant Sofram, Musterstadt (Entwurf)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+  <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20S6VH4ZEB%29">Ja, ich möchte diese Seite</a>
+</div>
+
+<main class="wrap">
+  <article class="blatt">
+    <div class="blatt__alt" aria-hidden="true"><span id="gestern"></span></div>
+    <header class="blatt__kopf">
+      <h1>Restaurant Sofram</h1>
+      <p class="ort">Türkisches Restaurant in Musterstadt</p>
+    </header>
+    <div class="blatt__koerper">
+      <p class="zahl" id="zahl">Heute</p>
+      <p class="tagzeile" id="tag">Zeiten siehe unten</p>
+      <p class="jetzt" id="jetzt">Öffnungszeiten stehen weiter unten</p>
+      <div class="leiste" id="leiste" style="--span:720" hidden>
+        <span class="leiste__skala" aria-hidden="true"><span style="--a:0">11</span><span style="--a:360">17</span><span style="--a:720">23 Uhr</span></span>
+        <span class="leiste__bahn" id="bahn" aria-hidden="true"></span>
+      </div>
+    </div>
+  </article>
+
+  <div class="knoepfe">
+    <a class="knopf knopf--voll" href="tel:+491234567894">Anrufen: 01234 567894</a>
+    <a class="knopf knopf--rand" href="https://www.google.com/maps/search/?api=1&query=Restaurant%20Sofram%20Lindenstra%C3%9Fe%202%2012345%20Musterstadt">Anfahrt</a>
+  </div>
+  <p class="gerichte">Gäste nennen in Google Maps oft: Döner, Pizza.</p>
+
+  <section aria-labelledby="h-zeiten">
+    <h2 id="h-zeiten">Öffnungszeiten</h2>
+    <dl class="karte">
+      <div data-tag="1"><dt>Montag</dt><dd>11:00 bis 23:00</dd></div>
+      <div data-tag="2"><dt>Dienstag</dt><dd>11:00 bis 23:00</dd></div>
+      <div data-tag="3"><dt>Mittwoch</dt><dd>Ruhetag</dd></div>
+      <div data-tag="4"><dt>Donnerstag</dt><dd>11:00 bis 23:00</dd></div>
+      <div data-tag="5"><dt>Freitag</dt><dd>11:00 bis 23:00</dd></div>
+      <div data-tag="6"><dt>Samstag</dt><dd>11:00 bis 23:00</dd></div>
+      <div data-tag="0"><dt>Sonntag</dt><dd>16:00 bis 23:00</dd></div>
+    </dl>
+  </section>
+
+  <div class="muster" aria-hidden="true">
+    <svg viewBox="0 0 350 84" focusable="false"><rect class="mf" x="0" y="0" width="25" height="28"/><rect class="mf" x="50" y="0" width="25" height="28"/><rect class="mf" x="100" y="0" width="25" height="28"/><rect class="mf" x="150" y="0" width="25" height="28"/><rect class="mf" x="200" y="0" width="25" height="28"/><rect class="mf" x="250" y="0" width="25" height="28"/><rect class="mf" x="300" y="0" width="25" height="28"/><rect class="mf" x="25" y="28" width="25" height="28"/><rect class="mf" x="75" y="28" width="25" height="28"/><rect class="mf" x="125" y="28" width="25" height="28"/><rect class="mf" x="175" y="28" width="25" height="28"/><rect class="mf" x="225" y="28" width="25" height="28"/><rect class="mf" x="275" y="28" width="25" height="28"/><rect class="mf" x="325" y="28" width="25" height="28"/><rect class="mf" x="0" y="56" width="25" height="28"/><rect class="mf" x="50" y="56" width="25" height="28"/><rect class="mf" x="100" y="56" width="25" height="28"/><rect class="mf" x="150" y="56" width="25" height="28"/><rect class="mf" x="200" y="56" width="25" height="28"/><rect class="mf" x="250" y="56" width="25" height="28"/><rect class="mf" x="300" y="56" width="25" height="28"/><rect class="grund" x="140" y="6" width="70" height="72"/><path class="m" d="M158 16 H192 Q194 40 184 50 Q182 56 175 56 Q168 56 166 50 Q156 40 158 16 Z"/><path class="m" d="M165 34 H185"/><path class="m" d="M150 70 H200 M160 62 H190"/></svg>
+  </div>
+
+  <section aria-labelledby="h-vor">
+    <h2 id="h-vor">Über uns</h2>
+    <p class="platzhalter"><strong>Platzhalter:</strong> Hier stellen Sie Ihr Haus in zwei, drei Sätzen vor. Schicken Sie uns einfach Stichworte.</p>
+  </section>
+
+  <section aria-labelledby="h-speise">
+    <h2 id="h-speise">Speisekarte</h2>
+    <p class="platzhalter"><strong>Platzhalter:</strong> Ihre Speisekarte kommt hierher. Ein Handyfoto der Karte genügt.</p>
+  </section>
+
+  <section aria-labelledby="h-adr">
+    <h2 id="h-adr">Adresse</h2>
+    <p>Lindenstraße 2<br>12345 Musterstadt</p>
+    <a class="knopf knopf--rand" href="https://www.google.com/maps/search/?api=1&query=Restaurant%20Sofram%20Lindenstra%C3%9Fe%202%2012345%20Musterstadt">Anfahrt</a>
+  </section>
+
+  <section class="angebot" aria-labelledby="h-ang">
+    <h2 id="h-ang">Diese Seite für Ihren Betrieb</h2>
+    <dl class="karte">
+      <div class="summe"><dt>Ihre Webseite</dt><dd>99 €</dd></div>
+      <div><dt>Ein Jahr online</dt><dd>inklusive</dd></div>
+      <div><dt>Eine Änderungsrunde</dt><dd>inklusive</dd></div>
+      <div><dt>Einrichtung</dt><dd>übernehmen wir</dd></div>
+    </dl>
+    <p class="loesch">Ohne Antwort löschen wir diesen Entwurf am 18. Dezember 2026.</p>
+    <a class="knopf knopf--voll" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20S6VH4ZEB%29">Ja, ich möchte diese Seite</a>
+  </section>
+</main>
+
+<footer class="fuss">
+  <p>Diese Seite ist ein Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+  <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+</footer>
+
+<script>
+(function () {
+  var namen = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  var monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+  var kurz = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+  var base = 660, span = 720;
+  var z = {"1": [["11:00", "23:00"]], "2": [["11:00", "23:00"]], "3": [], "4": [["11:00", "23:00"]], "5": [["11:00", "23:00"]], "6": [["11:00", "23:00"]], "0": [["16:00", "23:00"]]};
+  var fmt = new Intl.DateTimeFormat("en-US", {timeZone: "Europe/Berlin", year: "numeric", month: "numeric", day: "numeric", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"});
+  function berlin(jetzt) {
+    var w = {};
+    fmt.formatToParts(jetzt).forEach(function (p) { w[p.type] = p.value; });
+    return {j: +w.year, mo: +w.month, d: +w.day, t: kurz[w.weekday], m: (+w.hour % 24) * 60 + +w.minute};
+  }
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  function zeige() {
+    var b = berlin(new Date()), t = b.t, m = b.m, heute = z[t], txt;
+    if (!heute.length) {
+      var n = 1; while (n < 7 && !z[(t + n) % 7].length) n++;
+      txt = "Heute Ruhetag, wieder offen am " + namen[(t + n) % 7];
+    } else {
+      var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+      var naechst = heute.filter(function (f) { return m < min(f[0]); })[0];
+      if (offen) txt = "Jetzt geöffnet bis " + offen[1] + " Uhr";
+      else if (naechst) txt = "Heute geöffnet ab " + naechst[0] + " Uhr";
+      else txt = "Heute schon geschlossen";
+    }
+    var zahl = document.getElementById("zahl");
+    zahl.textContent = b.d; zahl.className = "zahl zahl--tag";
+    document.getElementById("gestern").textContent = new Date(Date.UTC(b.j, b.mo - 1, b.d - 1)).getUTCDate();
+    document.getElementById("tag").textContent = namen[t] + ", " + monate[b.mo - 1];
+    document.getElementById("jetzt").textContent = txt;
+    var bahn = document.getElementById("bahn"), leiste = document.getElementById("leiste");
+    bahn.textContent = "";
+    heute.forEach(function (f) {
+      var i = document.createElement("i");
+      i.style.setProperty("--a", min(f[0]) - base); i.style.setProperty("--b", min(f[1]) - base);
+      bahn.appendChild(i);
+    });
+    if (heute.length && m >= base && m <= base + span) { var s = document.createElement("b"); s.style.setProperty("--a", m - base); bahn.appendChild(s); }
+    leiste.hidden = !heute.length;
+    Array.prototype.forEach.call(document.querySelectorAll(".karte div[data-tag]"), function (r) {
+      var ja = r.getAttribute("data-tag") == t;
+      r.className = ja ? "heute" : "";
+      if (ja) r.setAttribute("aria-current", "date"); else r.removeAttribute("aria-current");
+    });
+  }
+  zeige();
+  setInterval(zeige, 30000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) zeige(); });
+})();
+</script>
+</body>
+</html>

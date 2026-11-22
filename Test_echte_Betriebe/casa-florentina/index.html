@@ -1,0 +1,145 @@
+<!doctype html>
+<!-- Herleitung (Test an echten Daten aus Google Maps, Stand 2026-11-19): Fliesenband mit Lilie: Casa Fiorentina = Haus aus Florenz, Rezensionen nennen Wein, Panini, Feinkost; Familie weinrot, Fraunces; Name linksbündig auf Grund. Zeitlogik nach Zweitmeinung Codex korrigiert (2026-11-20). Familie und Schrift aus WS-34/35, Muster gezeichnet (WS-31). -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für CASA FIORENTINA in Musterstadt: Öffnungszeiten, Telefon und Anfahrt.">
+<title>CASA FIORENTINA, Musterstadt (Entwurf)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+  <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20C2NJ8YRQ%29">Ja, ich möchte diese Seite</a>
+</div>
+
+<main class="wrap">
+  <article class="blatt">
+    <div class="blatt__alt" aria-hidden="true"><span id="gestern"></span></div>
+    <header class="blatt__kopf blatt__kopf--grund">
+      <h1>CASA FIORENTINA</h1>
+      <p class="ort">Café und Feinkost in Musterstadt</p>
+    </header>
+    <div class="blatt__koerper">
+      <p class="zahl" id="zahl">Heute</p>
+      <p class="tagzeile" id="tag">Zeiten siehe unten</p>
+      <p class="jetzt" id="jetzt">Öffnungszeiten stehen weiter unten</p>
+      <div class="leiste" id="leiste" style="--span:600" hidden>
+        <span class="leiste__skala" aria-hidden="true"><span style="--a:0">9</span><span style="--a:300">14</span><span style="--a:600">19 Uhr</span></span>
+        <span class="leiste__bahn" id="bahn" aria-hidden="true"></span>
+      </div>
+    </div>
+  </article>
+
+  <div class="knoepfe">
+    <a class="knopf knopf--voll" href="tel:+491234567890">Anrufen: 01234 567890</a>
+    <a class="knopf knopf--rand" href="https://www.google.com/maps/search/?api=1&query=CASA%20FLORENTINA%20Marktstra%C3%9Fe%208%2012345%20Musterstadt">Anfahrt</a>
+  </div>
+
+  <section aria-labelledby="h-zeiten">
+    <h2 id="h-zeiten">Öffnungszeiten</h2>
+    <dl class="karte">
+      <div data-tag="1"><dt>Montag</dt><dd>Ruhetag</dd></div>
+      <div data-tag="2"><dt>Dienstag</dt><dd>Ruhetag</dd></div>
+      <div data-tag="3"><dt>Mittwoch</dt><dd>Ruhetag</dd></div>
+      <div data-tag="4"><dt>Donnerstag</dt><dd>Ruhetag</dd></div>
+      <div data-tag="5"><dt>Freitag</dt><dd>09:00 bis 19:00</dd></div>
+      <div data-tag="6"><dt>Samstag</dt><dd>10:00 bis 19:00</dd></div>
+      <div data-tag="0"><dt>Sonntag</dt><dd>10:00 bis 18:00</dd></div>
+    </dl>
+  </section>
+
+  <div class="muster" aria-hidden="true">
+    <svg viewBox="0 0 350 84" focusable="false"><rect class="m" x="4" y="6" width="42" height="72"/><path class="mf" d="M25 14 C34 26 33 38 25 46 C17 38 16 26 25 14 Z"/><path class="m" d="M23 42 C7 40 8 24 14 20 C15 30 18 36 23 40"/><path class="m" d="M27 42 C43 40 42 24 36 20 C35 30 32 36 27 40"/><path class="mf" d="M13 50 H37 V55 H13 Z"/><path class="m" d="M25 55 V68 M17 68 H33"/><rect class="m" x="54" y="6" width="42" height="72"/><path class="mf" d="M75 14 C84 26 83 38 75 46 C67 38 66 26 75 14 Z"/><path class="m" d="M73 42 C57 40 58 24 64 20 C65 30 68 36 73 40"/><path class="m" d="M77 42 C93 40 92 24 86 20 C85 30 82 36 77 40"/><path class="mf" d="M63 50 H87 V55 H63 Z"/><path class="m" d="M75 55 V68 M67 68 H83"/><rect class="m" x="104" y="6" width="42" height="72"/><path class="mf" d="M125 14 C134 26 133 38 125 46 C117 38 116 26 125 14 Z"/><path class="m" d="M123 42 C107 40 108 24 114 20 C115 30 118 36 123 40"/><path class="m" d="M127 42 C143 40 142 24 136 20 C135 30 132 36 127 40"/><path class="mf" d="M113 50 H137 V55 H113 Z"/><path class="m" d="M125 55 V68 M117 68 H133"/><rect class="m" x="154" y="6" width="42" height="72"/><path class="mf" d="M175 14 C184 26 183 38 175 46 C167 38 166 26 175 14 Z"/><path class="m" d="M173 42 C157 40 158 24 164 20 C165 30 168 36 173 40"/><path class="m" d="M177 42 C193 40 192 24 186 20 C185 30 182 36 177 40"/><path class="mf" d="M163 50 H187 V55 H163 Z"/><path class="m" d="M175 55 V68 M167 68 H183"/><rect class="m" x="204" y="6" width="42" height="72"/><path class="mf" d="M225 14 C234 26 233 38 225 46 C217 38 216 26 225 14 Z"/><path class="m" d="M223 42 C207 40 208 24 214 20 C215 30 218 36 223 40"/><path class="m" d="M227 42 C243 40 242 24 236 20 C235 30 232 36 227 40"/><path class="mf" d="M213 50 H237 V55 H213 Z"/><path class="m" d="M225 55 V68 M217 68 H233"/><rect class="m" x="254" y="6" width="42" height="72"/><path class="mf" d="M275 14 C284 26 283 38 275 46 C267 38 266 26 275 14 Z"/><path class="m" d="M273 42 C257 40 258 24 264 20 C265 30 268 36 273 40"/><path class="m" d="M277 42 C293 40 292 24 286 20 C285 30 282 36 277 40"/><path class="mf" d="M263 50 H287 V55 H263 Z"/><path class="m" d="M275 55 V68 M267 68 H283"/><rect class="m" x="304" y="6" width="42" height="72"/><path class="mf" d="M325 14 C334 26 333 38 325 46 C317 38 316 26 325 14 Z"/><path class="m" d="M323 42 C307 40 308 24 314 20 C315 30 318 36 323 40"/><path class="m" d="M327 42 C343 40 342 24 336 20 C335 30 332 36 327 40"/><path class="mf" d="M313 50 H337 V55 H313 Z"/><path class="m" d="M325 55 V68 M317 68 H333"/></svg>
+  </div>
+
+  <section aria-labelledby="h-vor">
+    <h2 id="h-vor">Über uns</h2>
+    <p class="platzhalter"><strong>Platzhalter:</strong> Hier stellen Sie Ihr Haus in zwei, drei Sätzen vor. Schicken Sie uns einfach Stichworte.</p>
+  </section>
+
+  <section aria-labelledby="h-speise">
+    <h2 id="h-speise">Speisekarte</h2>
+    <p class="platzhalter"><strong>Platzhalter:</strong> Ihre Speisekarte kommt hierher. Ein Handyfoto der Karte genügt.</p>
+  </section>
+
+  <section aria-labelledby="h-adr">
+    <h2 id="h-adr">Adresse</h2>
+    <p>Marktstraße 8<br>12345 Musterstadt</p>
+    <a class="knopf knopf--rand" href="https://www.google.com/maps/search/?api=1&query=CASA%20FLORENTINA%20Marktstra%C3%9Fe%208%2012345%20Musterstadt">Anfahrt</a>
+  </section>
+
+  <section class="angebot" aria-labelledby="h-ang">
+    <h2 id="h-ang">Diese Seite für Ihren Betrieb</h2>
+    <dl class="karte">
+      <div class="summe"><dt>Ihre Webseite</dt><dd>99 €</dd></div>
+      <div><dt>Ein Jahr online</dt><dd>inklusive</dd></div>
+      <div><dt>Eine Änderungsrunde</dt><dd>inklusive</dd></div>
+      <div><dt>Einrichtung</dt><dd>übernehmen wir</dd></div>
+    </dl>
+    <p class="loesch">Ohne Antwort löschen wir diesen Entwurf am 18. Dezember 2026.</p>
+    <a class="knopf knopf--voll" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20C2NJ8YRQ%29">Ja, ich möchte diese Seite</a>
+  </section>
+</main>
+
+<footer class="fuss">
+  <p>Diese Seite ist ein Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+  <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+</footer>
+
+<script>
+(function () {
+  var namen = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  var monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+  var kurz = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+  var base = 540, span = 600;
+  var z = {"1": [], "2": [], "3": [], "4": [], "5": [["09:00", "19:00"]], "6": [["10:00", "19:00"]], "0": [["10:00", "18:00"]]};
+  var fmt = new Intl.DateTimeFormat("en-US", {timeZone: "Europe/Berlin", year: "numeric", month: "numeric", day: "numeric", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"});
+  function berlin(jetzt) {
+    var w = {};
+    fmt.formatToParts(jetzt).forEach(function (p) { w[p.type] = p.value; });
+    return {j: +w.year, mo: +w.month, d: +w.day, t: kurz[w.weekday], m: (+w.hour % 24) * 60 + +w.minute};
+  }
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  function zeige() {
+    var b = berlin(new Date()), t = b.t, m = b.m, heute = z[t], txt;
+    if (!heute.length) {
+      var n = 1; while (n < 7 && !z[(t + n) % 7].length) n++;
+      txt = "Heute Ruhetag, wieder offen am " + namen[(t + n) % 7];
+    } else {
+      var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+      var naechst = heute.filter(function (f) { return m < min(f[0]); })[0];
+      if (offen) txt = "Jetzt geöffnet bis " + offen[1] + " Uhr";
+      else if (naechst) txt = "Heute geöffnet ab " + naechst[0] + " Uhr";
+      else txt = "Heute schon geschlossen";
+    }
+    var zahl = document.getElementById("zahl");
+    zahl.textContent = b.d; zahl.className = "zahl zahl--tag";
+    document.getElementById("gestern").textContent = new Date(Date.UTC(b.j, b.mo - 1, b.d - 1)).getUTCDate();
+    document.getElementById("tag").textContent = namen[t] + ", " + monate[b.mo - 1];
+    document.getElementById("jetzt").textContent = txt;
+    var bahn = document.getElementById("bahn"), leiste = document.getElementById("leiste");
+    bahn.textContent = "";
+    heute.forEach(function (f) {
+      var i = document.createElement("i");
+      i.style.setProperty("--a", min(f[0]) - base); i.style.setProperty("--b", min(f[1]) - base);
+      bahn.appendChild(i);
+    });
+    if (heute.length && m >= base && m <= base + span) { var s = document.createElement("b"); s.style.setProperty("--a", m - base); bahn.appendChild(s); }
+    leiste.hidden = !heute.length;
+    Array.prototype.forEach.call(document.querySelectorAll(".karte div[data-tag]"), function (r) {
+      var ja = r.getAttribute("data-tag") == t;
+      r.className = ja ? "heute" : "";
+      if (ja) r.setAttribute("aria-current", "date"); else r.removeAttribute("aria-current");
+    });
+  }
+  zeige();
+  setInterval(zeige, 30000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) zeige(); });
+})();
+</script>
+</body>
+</html>

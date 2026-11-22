@@ -1,0 +1,6 @@
+.claude/settings.local.json
+.env*
+_Archiv/
+__pycache__/
+*.pyc
+.hallmark/

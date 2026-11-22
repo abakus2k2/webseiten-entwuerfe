@@ -1,0 +1,101 @@
+/* Test an echten Daten (Google Maps, 2026-11-19) · Vorlage Entwurf D (Kalenderblatt) · Familie weinrot, Schrift Fraunces (WS-34/35), Muster gezeichnet (WS-31) */
+
+
+@font-face { font-family: "Fraunces"; src: url("../../fonts/Fraunces.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
+
+:root {
+  --grund: #FFFFFF;
+  --text: #1F1A17;
+  --akzent: #8C2F39;
+  --flaeche: #F4ECE9;
+  --schrift: "Fraunces", "Segoe UI", serif;
+  --rand: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; background: var(--grund); caret-color: var(--akzent); scrollbar-color: var(--akzent) var(--flaeche); }
+body { margin: 0; overflow-x: clip; background: var(--grund); color: var(--text); font-family: var(--schrift); font-size: 1.125rem; line-height: 1.5; }
+::selection { background: var(--akzent); color: var(--grund); }
+a { color: var(--akzent); text-underline-offset: 0.2em; }
+:focus-visible { outline: 3px solid var(--akzent); outline-offset: 3px; }
+p { margin: 0; }
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 1rem 1rem; }
+
+.band { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.25rem 1rem; padding: 0.5rem 1rem; background: var(--text); color: var(--grund); font-size: 0.9375rem; text-align: center; }
+.band a { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1rem; background: var(--grund); color: var(--text); font-weight: 700; text-decoration: none; }
+.band a:focus-visible { outline-color: var(--grund); }
+
+/* Das Blatt: obenauf der Abreißkalender, darunter zwei Bogenkanten als Stapel */
+.blatt { position: relative; margin: 1.5rem auto 0; max-width: 30rem; background: var(--grund); border: 2px solid var(--text); border-top: 0; isolation: isolate; }
+.blatt::before, .blatt::after { content: ""; position: absolute; inset: auto 0.4rem -0.5rem; height: 0.5rem; border: 2px solid var(--text); border-top: 0; background: var(--flaeche); z-index: -1; }
+.blatt::after { inset: auto 0.9rem -0.95rem; height: 0.45rem; background: var(--grund); z-index: -2; }
+.blatt__kopf { background: var(--akzent); color: var(--grund); padding: 1rem 1rem 0.9rem; text-align: center; border: 2px solid var(--text); border-bottom: 0; margin: 0 -2px; }
+h1 { margin: 0; font-size: clamp(2.25rem, 8.5vw + 0.25rem, 3rem); line-height: 1.05; font-weight: 800; text-wrap: balance; overflow-wrap: break-word; }
+.ort { margin-top: 0.25rem; font-size: 1.0625rem; }
+.blatt__koerper { padding: 1.25rem 1rem 1.5rem; text-align: center; }
+.zahl { font-size: 1.5rem; line-height: 1; font-weight: 700; color: var(--akzent); }
+.zahl--tag { font-size: clamp(6rem, 30vw, 8.5rem); font-weight: 800; line-height: 0.9; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tagzeile { margin-top: 0.5rem; font-size: 1.375rem; font-weight: 700; }
+.jetzt { margin-top: 0.75rem; padding: 0.6rem 0.5rem; border-block: 2px solid var(--akzent); font-size: 1.5rem; line-height: 1.25; font-weight: 700; color: var(--akzent); text-wrap: balance; }
+
+/* Balken der heutigen Zeiten, Strich für jetzt */
+.leiste { margin-top: 1rem; text-align: left; }
+.leiste__skala { position: relative; display: block; height: 1.5em; font-size: 0.9375rem; }
+.leiste__skala span { position: absolute; top: 0; left: calc(var(--a) / var(--span) * 100%); transform: translateX(-50%); white-space: nowrap; }
+.leiste__skala span:first-child { transform: none; }
+.leiste__skala span:last-child { transform: translateX(-100%); }
+.leiste__bahn { position: relative; display: block; height: 1.25rem; margin-top: 0.25rem; background: var(--flaeche); border: 1px solid var(--text); }
+.leiste__bahn i { position: absolute; top: 0; bottom: 0; left: calc(var(--a) / var(--span) * 100%); width: calc((var(--b) - var(--a)) / var(--span) * 100%); background: var(--akzent); }
+.leiste__bahn b { position: absolute; top: -0.4rem; bottom: -0.4rem; left: calc(var(--a) / var(--span) * 100%); width: 3px; margin-left: -1px; background: var(--text); }
+
+/* Das gestrige Blatt fliegt einmal beim Laden ab: die eine Bewegung der Seite */
+.blatt__alt { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; background: var(--grund); border: 2px solid var(--text); font-size: 6rem; font-weight: 800; color: var(--akzent); transform-origin: 8% 0; pointer-events: none; animation: abreissen 0.6s cubic-bezier(0.4, 0, 0.7, 1) 0.1s both; }
+@keyframes abreissen { from { transform: none; opacity: 1; } to { transform: translate(-14%, -55%) rotate(-16deg); opacity: 0; } }
+
+.knoepfe { display: grid; gap: 0.75rem; margin: 2rem auto 0; max-width: 28rem; }
+.knopf { display: flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: 0 1.25rem; font-family: inherit; font-size: 1.125rem; font-weight: 700; text-decoration: none; border: 2px solid var(--akzent); transition: background-color 0.2s ease-out, color 0.2s ease-out; }
+.knopf--voll { background: var(--akzent); color: var(--grund); }
+.knopf--rand { background: var(--grund); color: var(--akzent); }
+.knopf--voll:hover { background: var(--text); border-color: var(--text); }
+.knopf--rand:hover { background: var(--flaeche); }
+.knopf:active { transform: translateY(1px); }
+
+section { padding-top: 2.75rem; }
+h2 { margin: 0 0 1rem; font-size: 1.75rem; line-height: 1.15; font-weight: 700; color: var(--akzent); text-wrap: balance; }
+
+/* Karte mit Punktlinie bis zur rechten Spalte */
+.karte { margin: 0 -0.75rem; }
+.karte > div { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.55rem 0.75rem; }
+.karte dt { display: flex; flex: 1; align-items: baseline; gap: 0.5rem; font-weight: 700; }
+.karte dt::after { content: ""; flex: 1; min-width: 1rem; border-bottom: 2px dotted var(--text); transform: translateY(-0.2em); }
+.karte dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.karte .heute { background: var(--flaeche); box-shadow: inset 0 -3px 0 var(--akzent); }
+.karte .heute dt, .karte .heute dd { font-weight: 800; color: var(--akzent); }
+.karte .summe dd { font-size: 2.25rem; line-height: 1; font-weight: 800; color: var(--akzent); }
+
+.muster { margin-top: 2.75rem; }
+.muster svg { display: block; width: 100%; height: auto; max-width: 26rem; margin: 0 auto; }
+.loch circle { fill: none; stroke: var(--text); stroke-width: 1.5; }
+.perf { fill: none; stroke: var(--text); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.grund { fill: var(--grund); }
+.blatt-z { fill: none; stroke: var(--akzent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.platzhalter { padding: 1rem; background: var(--flaeche); border: 2px dashed var(--akzent); }
+.platzhalter strong { color: var(--akzent); }
+section > .knopf { max-width: 20rem; margin-top: 1rem; }
+.angebot .knopf { max-width: 28rem; }
+.loesch { margin: 1rem 0 1.5rem; }
+
+.fuss { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; font-size: 0.9375rem; }
+.fuss p + p { margin-top: 0.25rem; }
+
+@media (min-width: 40rem) { .knoepfe { grid-template-columns: auto auto; justify-content: center; max-width: none; } .knopf { white-space: nowrap; } }
+@media (prefers-reduced-motion: reduce) { .blatt__alt { display: none; } .knopf { transition: none; } .knopf:active { transform: none; } }
+
+/* Test-Ergänzungen: Muster der Betriebe, Kopf auf Grund, Gerichtezeile */
+.m { fill: none; stroke: var(--akzent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.mf { fill: var(--akzent); stroke: none; }
+.muster .grund { fill: var(--grund); }
+.blatt__kopf--grund { background: var(--grund); color: var(--text); text-align: left; border-bottom: 4px solid var(--akzent); }
+.blatt__kopf--grund .ort { color: var(--akzent); font-weight: 600; }
+.gerichte { margin: 1.5rem auto 0; max-width: 28rem; text-align: center; font-weight: 600; }

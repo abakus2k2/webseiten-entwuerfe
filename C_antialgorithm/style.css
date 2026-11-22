@@ -1,0 +1,65 @@
+/* Entwurf C, Antialgorithm: handgemaltes Wirtshausschild. Farbfamilie oliv_nacht (WS-35), Schrift Literata (WS-34), keine Fotos (WS-31). */
+@font-face { font-family: "Literata"; src: url("../fonts/Literata.ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
+
+:root { --grund: #1C1F1A; --text: #ECEAE3; --akzent: #D4B25A; --flaeche: #272B24; --schrift: "Literata", Georgia, serif; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; background: var(--grund); caret-color: var(--akzent); scrollbar-color: var(--akzent) var(--grund); }
+body { margin: 0; overflow-x: clip; background: var(--grund); color: var(--text); font-family: var(--schrift); font-size: 1.125rem; line-height: 1.55; }
+::selection { background: var(--akzent); color: var(--grund); }
+a { color: var(--akzent); text-underline-offset: 0.2em; }
+:focus-visible { outline: 3px solid var(--akzent); outline-offset: 3px; }
+p { margin: 0; }
+
+.band { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.25rem 1rem; padding: 0.5rem 1rem; background: var(--akzent); color: var(--grund); font-size: 0.9375rem; font-weight: 600; text-align: center; }
+.band a { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1rem; background: var(--grund); color: var(--text); font-weight: 700; text-decoration: none; border-radius: 6px; }
+.band a:focus-visible { outline-color: var(--grund); }
+
+main { max-width: 40rem; margin: 0 auto; padding: 0 1rem 1rem; }
+.kopf { padding-top: 0.75rem; }
+h1.schild { margin: 0 auto; max-width: 30rem; line-height: 0; }
+.schild svg { display: block; width: 100%; height: auto; }
+
+/* Jetzt-Zeile als Wendeschild an der Tür; die eine Bewegung der Seite: es dreht sich einmal beim Laden */
+.wende { position: relative; width: fit-content; max-width: 100%; margin: 1.5rem auto 0; padding: 1.5rem 1rem 0.75rem; background: var(--akzent); color: var(--grund); font-size: 1.375rem; text-wrap: balance; line-height: 1.25; font-weight: 800; text-align: center; border-radius: 10px; transform: rotate(-1.6deg); transform-origin: 50% -1.5rem; }
+.wende::before { content: ""; position: absolute; left: 50%; top: -1.5rem; width: 2px; height: 1.5rem; background: var(--text); }
+.wende::after { content: ""; position: absolute; left: calc(50% - 5px); top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--grund); }
+.wende--zu { background: var(--text); }
+@keyframes wenden { from { transform: perspective(500px) rotateX(90deg) rotate(-1.6deg); } to { transform: rotate(-1.6deg); } }
+.wende--auf, .wende--zu { animation: wenden 0.7s ease-out 1; }
+
+.knoepfe { display: grid; gap: 0.75rem; margin: 1.75rem auto 0; max-width: 28rem; }
+.btn { display: flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: 0 1.25rem; font-family: inherit; font-size: 1.125rem; font-weight: 700; text-decoration: none; border: 2px solid var(--akzent); border-radius: 6px; transition: background-color 0.2s ease-out, color 0.2s ease-out; }
+.btn--primary { background: var(--akzent); color: var(--grund); }
+.btn--secondary { background: var(--grund); color: var(--akzent); }
+.btn--primary:hover { background: var(--text); border-color: var(--text); }
+.btn--secondary:hover { background: var(--flaeche); }
+.btn:active { transform: translateY(1px); }
+
+section { padding-top: 2.75rem; }
+h2 { margin: 0 0 1rem; font-size: 1.625rem; line-height: 1.2; font-weight: 700; color: var(--akzent); }
+
+.woche { margin: 0; background: var(--flaeche); border: 2px solid var(--akzent); border-radius: 14px; overflow: hidden; }
+.woche > div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.7rem 1rem; border-bottom: 1px solid var(--grund); }
+.woche > div:last-child { border-bottom: 0; }
+.woche dt { font-weight: 600; }
+.woche dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.woche .heute { background: var(--akzent); color: var(--grund); font-weight: 800; }
+
+.muster { margin-top: 2.75rem; }
+.muster svg { display: block; width: 100%; height: auto; }
+
+.platzhalter { padding: 1rem; background: var(--flaeche); border: 2px dashed var(--akzent); border-radius: 10px; max-width: 34rem; }
+.platzhalter strong { color: var(--akzent); }
+
+section > .btn { max-width: 20rem; margin-top: 1rem; }
+.preis { font-size: 3.5rem; line-height: 1; font-weight: 800; color: var(--akzent); margin-bottom: 0.75rem; }
+.angebot > p { max-width: 34rem; }
+.loesch { margin: 1rem 0 1.5rem; }
+.angebot .btn { max-width: 28rem; }
+
+.fuss { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; font-size: 0.9375rem; }
+.fuss p + p { margin-top: 0.25rem; }
+
+@media (min-width: 40rem) { .knoepfe { grid-template-columns: auto auto; justify-content: center; max-width: none; } .btn { white-space: nowrap; } }
+@media (prefers-reduced-motion: reduce) { .wende--auf, .wende--zu { animation: none; } .btn { transition: none; } .btn:active { transform: none; } }

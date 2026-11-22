@@ -1,0 +1,269 @@
+<!doctype html>
+<!-- Herleitung (Gegenentwurf Gemini, 3 Varianten v1/v2/v3, echte Daten aus Google Maps, Stand 2026-11-22):
+     v1: Klassisch-Handwerklich (Duotone-Holzschnitt + Sekundärfarbe Kräuter-Olivgrün)
+     v2: Aquarell & Pastell (Pastell-Aquarell-Illustration + warmes Sand-/Minz-/Safran-Pastell)
+     v3: Retro-Siebdruck & Mid-Century-Pastell (Mehrfarbiges Streetfood-Siebdruck-Plakat mit Safran-Gold & Minze) -->
+<html lang="de" data-variante="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für Karim Imbiss in Musterstadt-Süd: Öffnungszeiten, Telefon und Anfahrt.">
+<title>Karim Imbiss, Musterstadt-Süd (Gegenentwurf Gemini)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+  <div class="band-aktionen">
+    <div class="stil-umschalter" role="group" aria-label="Design-Variante testen">
+      <button type="button" data-set-var="v1">1 · Holzschnitt</button>
+      <button type="button" data-set-var="v2" aria-pressed="true">2 · Aquarell-Pastell</button>
+      <button type="button" data-set-var="v3">3 · Siebdruck-Pastell</button>
+    </div>
+    <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20K3WD9PLA%29">Ja, ich möchte diese Seite</a>
+  </div>
+</div>
+
+<main class="board-rahmen">
+  <div class="board-grid">
+
+    <!-- Linke Spalte: Plakat-Kopf, selbsterklärendes Live-Status-Dock, Illustration, Spezialitäten -->
+    <div class="board-spalte board-spalte--links">
+      <article class="plakat-karte">
+        <header class="plakat-kopf">
+          <p class="plakat-kategorie">Imbiss · Musterstadt-Süd</p>
+          <h1>Karim Imbiss</h1>
+          <p class="plakat-claim">Täglich von 11:00 bis 21:30 Uhr geöffnet</p>
+        </header>
+
+        <div class="status-karte" id="status-karte" aria-live="polite">
+          <div class="status-kopf">
+            <span class="status-badge" id="status-badge">Status</span>
+            <span class="tagzeile" id="tag">Montag bis Sonntag</span>
+          </div>
+          <p class="jetzt" id="jetzt">Öffnungszeiten siehe unten</p>
+          <p class="naechste-info" id="naechste-info"></p>
+
+          <div class="zeitstrahl" id="leiste" style="--span:960" hidden>
+            <div class="zeitstrahl__skala" aria-hidden="true">
+              <span style="--a:0">08:00</span>
+              <span style="--a:240">12:00</span>
+              <span style="--a:480">16:00</span>
+              <span style="--a:720">20:00</span>
+              <span style="--a:960">24:00</span>
+            </div>
+            <div class="zeitstrahl__bahn" id="bahn" aria-hidden="true"></div>
+            <div class="zeitstrahl__legende" aria-hidden="true">
+              <span class="leg-item"><i class="leg-box leg-box--offen"></i> Geöffnete Zeit</span>
+              <span class="leg-item"><i class="leg-box leg-box--zu"></i> Geschlossen</span>
+              <span class="leg-item"><i class="leg-strich"></i> Jetzt (<span id="uhr-jetzt">--:--</span>)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="knoepfe">
+          <a class="knopf knopf--voll" href="tel:+491234567892">Anrufen: 01234 567892</a>
+          <a class="knopf knopf--sekundaer" href="https://www.google.com/maps/search/?api=1&query=Karim%20Imbiss%20Bahnhofstra%C3%9Fe%20135%20Musterstadt-Süd">Anfahrt starten</a>
+        </div>
+
+        <figure class="holzschnitt">
+          <img id="illu-img" src="illustration_v2.webp" alt="Illustration mit frischem Sesam-Fladenbrot, Grillspießen, Salat und Teeglas" width="600" height="400" loading="eager">
+        </figure>
+
+        <div class="maps-themen" aria-label="Beliebte Spezialitäten">
+          <p class="maps-themen__titel" id="marketing-titel">Karim Imbiss wird besonders geschätzt für:</p>
+          <ul class="maps-themen__chips">
+            <li><strong>Frischer Döner</strong></li>
+            <li>Knackiger Salat</li>
+            <li>Türkischer Tee</li>
+          </ul>
+        </div>
+
+        <section class="standort" aria-labelledby="h-adr">
+          <h2 id="h-adr">Adresse in Musterstadt-Süd</h2>
+          <address class="adresse-kasten">
+            <strong>Karim Imbiss</strong><br>
+            Bahnhofstraße 135 · Musterstadt-Süd
+          </address>
+          <a class="knopf knopf--rand knopf--kompakt" href="https://www.google.com/maps/search/?api=1&query=Karim%20Imbiss%20Bahnhofstra%C3%9Fe%20135%20Musterstadt-Süd">In Google Maps öffnen</a>
+        </section>
+      </article>
+    </div>
+
+    <!-- Rechte Spalte: 7-Tage-Tafel, Speisekarten-Einbau, 99-€-Angebot -->
+    <div class="board-spalte board-spalte--rechts">
+      <section class="modul" aria-labelledby="h-zeiten">
+        <h2 id="h-zeiten">Öffnungszeiten (7 Tage geöffnet)</h2>
+        <dl class="karte">
+          <div data-tag="1"><dt>Montag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="2"><dt>Dienstag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="3"><dt>Mittwoch</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="4"><dt>Donnerstag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="5"><dt>Freitag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="6"><dt>Samstag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+          <div data-tag="0"><dt>Sonntag</dt><dd>11:00 bis 21:30 Uhr</dd></div>
+        </dl>
+      </section>
+
+      <section class="modul ausbau-modul" aria-labelledby="h-ausbau">
+        <div class="modul-kopf">
+          <span class="stempel">Inklusive nach Zusage</span>
+          <h2 id="h-ausbau">Ihre Speisekarte &amp; Preise</h2>
+        </div>
+        <p class="modul-text">Damit kein falsches Gericht und kein falscher Preis auf Ihrer Seite steht, tragen wir Ihre echte Karte direkt nach Ihrer Zusage für Sie ein:</p>
+        <div class="ausbau-kacheln">
+          <div class="platzhalter">
+            <strong>Komplette Speise- &amp; Preistafel</strong>
+            <p>Ein Handyfoto Ihrer Tafel über der Theke oder Ihres Flyers genügt, wir tippen alle Gerichte und Preise sauber für Sie ab.</p>
+          </div>
+          <div class="platzhalter">
+            <strong>Eigene Fotos &amp; kurzer Text über Ihren Imbiss</strong>
+            <p>Schicken Sie uns auf Wunsch ein bis drei Handyfotos und wenige Stichworte.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="modul angebot-modul" aria-labelledby="h-ang">
+        <h2 id="h-ang">Diese Seite für Ihren Betrieb</h2>
+        <dl class="karte">
+          <div class="summe"><dt>Fertige Webseite</dt><dd>99 €</dd></div>
+          <div><dt>Ein Jahr lang online</dt><dd>inklusive</dd></div>
+          <div><dt>Einbau Ihrer Speisekarte &amp; Fotos</dt><dd>inklusive</dd></div>
+          <div><dt>Rechnung erst nach „Passt so“</dt><dd>ohne Vorkasse</dd></div>
+        </dl>
+        <p class="hinweis">Ab dem 2. Jahr 39 € pro Jahr (oder kostenlose Übergabe der Dateien). Ohne Antwort löschen wir diesen Entwurf am 18. Dezember 2026.</p>
+        <a class="knopf knopf--voll" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20K3WD9PLA%29">Ja, ich möchte diese Seite</a>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer class="fuss">
+  <p>Diese Seite ist ein unverbindlicher Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+  <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+</footer>
+
+<script>
+(function () {
+  var namen = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  var monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+  var kurz = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+  var base = 480, span = 960; // 08:00 bis 24:00 Uhr
+  var z = {"1": [["11:00", "21:30"]], "2": [["11:00", "21:30"]], "3": [["11:00", "21:30"]], "4": [["11:00", "21:30"]], "5": [["11:00", "21:30"]], "6": [["11:00", "21:30"]], "0": [["11:00", "21:30"]]};
+  var marketingTexte = {
+    v1: "Karim Imbiss wird besonders geschätzt für:",
+    v2: "Bei unseren Gästen besonders beliebt:",
+    v3: "Hier kommen Gäste gerne für:"
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var simTag = params.get("simTag");
+  var simZeit = params.get("simZeit");
+
+  function setVariante(v) {
+    if (!["v1","v2","v3"].includes(v)) v = "v2";
+    document.documentElement.setAttribute("data-variante", v);
+    var img = document.getElementById("illu-img");
+    img.src = v === "v1" ? "illustration.webp" : ("illustration_" + v + ".webp");
+    document.getElementById("marketing-titel").textContent = marketingTexte[v];
+    Array.prototype.forEach.call(document.querySelectorAll("[data-set-var]"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-set-var") === v ? "true" : "false");
+    });
+  }
+  if (params.get("variante")) setVariante(params.get("variante"));
+  Array.prototype.forEach.call(document.querySelectorAll("[data-set-var]"), function (b) {
+    b.onclick = function () { setVariante(b.getAttribute("data-set-var")); };
+  });
+
+  var fmt = new Intl.DateTimeFormat("en-US", {timeZone: "Europe/Berlin", year: "numeric", month: "numeric", day: "numeric", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"});
+  function berlin(jetzt) {
+    if (simTag !== null && simZeit) {
+      var sp = simZeit.split(":");
+      return {j: 2026, mo: 11, d: 22, t: +simTag, m: (+sp[0]) * 60 + (+sp[1]), uhr: simZeit};
+    }
+    var w = {};
+    fmt.formatToParts(jetzt).forEach(function (p) { w[p.type] = p.value; });
+    var hh = String(+w.hour % 24).padStart(2, "0");
+    var mm = String(+w.minute).padStart(2, "0");
+    return {j: +w.year, mo: +w.month, d: +w.day, t: kurz[w.weekday], m: (+w.hour % 24) * 60 + +w.minute, uhr: hh + ":" + mm};
+  }
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  function findeNaechsteOeffnung(t) {
+    var n = 1;
+    while (n <= 7 && !z[(t + n) % 7].length) n++;
+    var zielTag = (t + n) % 7;
+    var fenster = z[zielTag][0];
+    var tagWort = n === 1 ? ("morgen (" + namen[zielTag] + ")") : ("am " + namen[zielTag]);
+    return {tagWort: tagWort, tagName: namen[zielTag], von: fenster[0], bis: fenster[1]};
+  }
+
+  function zeige() {
+    var b = berlin(new Date()), t = b.t, m = b.m, heute = z[t];
+    var badge = document.getElementById("status-badge");
+    var jetztEl = document.getElementById("jetzt");
+    var naechsteEl = document.getElementById("naechste-info");
+    var karteEl = document.getElementById("status-karte");
+    var leiste = document.getElementById("leiste");
+    var bahn = document.getElementById("bahn");
+
+    document.getElementById("tag").textContent = namen[t] + ", " + b.d + ". " + monate[b.mo - 1];
+    document.getElementById("uhr-jetzt").textContent = b.uhr + " Uhr";
+
+    var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+    var spaeterHeute = heute.filter(function (f) { return m < min(f[0]); })[0];
+    if (offen) {
+      badge.textContent = "JETZT GEÖFFNET";
+      badge.className = "status-badge status-badge--offen";
+      karteEl.setAttribute("data-status", "offen");
+      jetztEl.textContent = "Heute noch bis " + offen[1] + " Uhr für Sie geöffnet";
+      naechsteEl.textContent = "Heutige Öffnungszeit: " + offen[0] + " bis " + offen[1] + " Uhr";
+      naechsteEl.hidden = false;
+    } else if (spaeterHeute) {
+      badge.textContent = "ÖFFNET HEUTE";
+      badge.className = "status-badge status-badge--bald";
+      karteEl.setAttribute("data-status", "bald");
+      jetztEl.textContent = "Gerade noch geschlossen";
+      naechsteEl.textContent = "Öffnet heute um " + spaeterHeute[0] + " Uhr (geöffnet bis " + spaeterHeute[1] + " Uhr).";
+      naechsteEl.hidden = false;
+    } else {
+      var morgenInfo = findeNaechsteOeffnung(t);
+      badge.textContent = "FEIERABEND";
+      badge.className = "status-badge status-badge--zu";
+      karteEl.setAttribute("data-status", "zu");
+      jetztEl.textContent = "Heute bereits geschlossen (war bis " + heute[heute.length - 1][1] + " Uhr offen)";
+      naechsteEl.textContent = "Öffnet wieder " + morgenInfo.tagWort + " um " + morgenInfo.von + " Uhr.";
+      naechsteEl.hidden = false;
+    }
+
+    bahn.textContent = "";
+    heute.forEach(function (f) {
+      var i = document.createElement("i");
+      var start = Math.max(0, min(f[0]) - base);
+      var ende = Math.min(span, min(f[1]) - base);
+      i.style.setProperty("--a", start);
+      i.style.setProperty("--b", ende);
+      i.textContent = f[0] + " bis " + f[1];
+      bahn.appendChild(i);
+    });
+    var pos = Math.max(0, Math.min(span, m - base));
+    var s = document.createElement("b");
+    s.style.setProperty("--a", pos);
+    bahn.appendChild(s);
+    leiste.hidden = false;
+
+    Array.prototype.forEach.call(document.querySelectorAll(".karte div[data-tag]"), function (r) {
+      var ja = r.getAttribute("data-tag") == t;
+      r.className = ja ? "heute" : "";
+      if (ja) r.setAttribute("aria-current", "date"); else r.removeAttribute("aria-current");
+    });
+  }
+  zeige();
+  setInterval(zeige, 30000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) zeige(); });
+})();
+</script>
+</body>
+</html>

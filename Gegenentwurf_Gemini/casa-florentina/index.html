@@ -1,0 +1,292 @@
+<!doctype html>
+<!-- Herleitung (Gegenentwurf Gemini, 3 Varianten v1/v2/v3, echte Daten aus Google Maps, Stand 2026-11-22):
+     v1: Klassisch-Handwerklich (Duotone-Linolschnitt + Sekundärfarbe Toskana-Salbei)
+     v2: Aquarell & Pastell (Pastell-Aquarell-Illustration + weiche Creme-/Salbei-Pastelltöne)
+     v3: Retro-Siebdruck & Mid-Century-Pastell (Mehrfarbige Siebdruck-Grafik + Ocker/Salbei/Weinrot) -->
+<html lang="de" data-variante="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf einer Webseite für CASA FIORENTINA in Musterstadt: Öffnungszeiten, Telefon und Anfahrt.">
+<title>CASA FIORENTINA, Musterstadt (Gegenentwurf Gemini)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="band" role="region" aria-label="Hinweis zum Entwurf">
+  <p>Entwurf für Sie, nur mit Ihrem Code sichtbar</p>
+  <div class="band-aktionen">
+    <div class="stil-umschalter" role="group" aria-label="Design-Variante testen">
+      <button type="button" data-set-var="v1">1 · Buchdruck</button>
+      <button type="button" data-set-var="v2" aria-pressed="true">2 · Aquarell-Pastell</button>
+      <button type="button" data-set-var="v3">3 · Siebdruck-Pastell</button>
+    </div>
+    <a href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20C2NJ8YRQ%29">Ja, ich möchte diese Seite</a>
+  </div>
+</div>
+
+<main class="buch-rahmen">
+  <article class="menubuch">
+
+    <!-- Linke Buchseite: Marke, Illustration, Live-Öffnungsstatus, Aktionen, Standort -->
+    <div class="buchseite buchseite--links">
+      <header class="kopf">
+        <p class="untertitel-oben">Café &amp; Italienische Feinkost · Musterstadt</p>
+        <h1>CASA FIORENTINA</h1>
+        <div class="trennlinie" aria-hidden="true">
+          <span></span><i>◆</i><span></span>
+        </div>
+      </header>
+
+      <!-- Überarbeiteter, selbsterklärender Öffnungszeiten-Block -->
+      <div class="status-karte" id="status-karte" aria-live="polite">
+        <div class="status-kopf">
+          <span class="status-badge" id="status-badge">Status</span>
+          <span class="tagzeile" id="tag">Freitag bis Sonntag</span>
+        </div>
+        <p class="jetzt" id="jetzt">Öffnungszeiten siehe Übersicht</p>
+        <p class="naechste-info" id="naechste-info"></p>
+
+        <div class="zeitstrahl" id="leiste" style="--span:960" hidden>
+          <div class="zeitstrahl__skala" aria-hidden="true">
+            <span style="--a:0">08:00</span>
+            <span style="--a:240">12:00</span>
+            <span style="--a:480">16:00</span>
+            <span style="--a:720">20:00</span>
+            <span style="--a:960">24:00</span>
+          </div>
+          <div class="zeitstrahl__bahn" id="bahn" aria-hidden="true"></div>
+          <div class="zeitstrahl__legende" aria-hidden="true">
+            <span class="leg-item"><i class="leg-box leg-box--offen"></i> Geöffnete Zeit</span>
+            <span class="leg-item"><i class="leg-box leg-box--zu"></i> Geschlossen</span>
+            <span class="leg-item"><i class="leg-strich"></i> Jetzt (<span id="uhr-jetzt">--:--</span>)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="knoepfe">
+        <a class="knopf knopf--voll" href="tel:+491234567890">Anrufen: 01234 567890</a>
+        <a class="knopf knopf--sekundaer" href="https://www.google.com/maps/search/?api=1&query=CASA%20FLORENTINA%20Marktstra%C3%9Fe%208%2012345%20Musterstadt">Anfahrt planen</a>
+      </div>
+
+      <figure class="vignette">
+        <img id="illu-img" src="illustration_v2.webp" alt="Illustration im Florentiner Stil mit Wein, Panini und Olivenzweig" width="600" height="400" loading="eager">
+      </figure>
+
+      <div class="stichworte" aria-label="Beliebte Spezialitäten">
+        <p class="stichworte__titel" id="marketing-titel">Die Casa Fiorentina wird besonders geschätzt für:</p>
+        <ul class="stichworte__liste">
+          <li>Ausgewählte Weine</li>
+          <li>Frische Panini</li>
+          <li>Italienische Feinkost</li>
+        </ul>
+      </div>
+
+      <section class="standort" aria-labelledby="h-adr">
+        <h2 id="h-adr">Standort in Musterstadt</h2>
+        <address class="adresse-box">
+          <strong>CASA FIORENTINA</strong><br>
+          Marktstraße 8<br>
+          12345 Musterstadt
+        </address>
+        <a class="knopf knopf--rand knopf--kompakt" href="https://www.google.com/maps/search/?api=1&query=CASA%20FLORENTINA%20Marktstra%C3%9Fe%208%2012345%20Musterstadt">In Google Maps öffnen</a>
+      </section>
+    </div>
+
+    <!-- Rechte Buchseite: Wochen-Öffnungszeiten, Ausbau-Einlage, 99-€-Angebot -->
+    <div class="buchseite buchseite--rechts">
+      <section class="zeiten-sektion" aria-labelledby="h-zeiten">
+        <h2 id="h-zeiten">Feste Öffnungszeiten</h2>
+        <dl class="karte">
+          <div data-tag="1"><dt>Montag</dt><dd class="ruhe">Geschlossen</dd></div>
+          <div data-tag="2"><dt>Dienstag</dt><dd class="ruhe">Geschlossen</dd></div>
+          <div data-tag="3"><dt>Mittwoch</dt><dd class="ruhe">Geschlossen</dd></div>
+          <div data-tag="4"><dt>Donnerstag</dt><dd class="ruhe">Geschlossen</dd></div>
+          <div data-tag="5"><dt>Freitag</dt><dd>09:00 bis 19:00 Uhr</dd></div>
+          <div data-tag="6"><dt>Samstag</dt><dd>10:00 bis 19:00 Uhr</dd></div>
+          <div data-tag="0"><dt>Sonntag</dt><dd>10:00 bis 18:00 Uhr</dd></div>
+        </dl>
+      </section>
+
+      <section class="ausbau-einlage" aria-labelledby="h-ausbau">
+        <div class="einlage-kopf">
+          <span class="einlage-stempel">Im Preis enthalten</span>
+          <h2 id="h-ausbau">Ihre Karte &amp; Ihre Fotos</h2>
+        </div>
+        <p class="einlage-intro">Damit dieser Entwurf nichts Erfundenes über Ihr Haus behauptet, stehen hier noch keine erfundenen Gerichte. Nach Ihrer Zusage ergänzen wir für Sie:</p>
+        <div class="einlage-punkte">
+          <div class="platzhalter">
+            <strong>Ihre Speise- &amp; Weinkarte</strong>
+            <p>Ein einfaches Handyfoto Ihrer aktuellen Karte oder Tafel genügt, wir tippen alles sauber für Sie ab.</p>
+          </div>
+          <div class="platzhalter">
+            <strong>Persönliche Vorstellung &amp; eigene Fotos</strong>
+            <p>Schicken Sie uns zwei, drei Stichworte zu Ihrem Café und auf Wunsch bis zu drei eigene Fotos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="angebot" aria-labelledby="h-ang">
+        <h2 id="h-ang">Diese Seite für Ihr Haus</h2>
+        <dl class="karte angebot-liste">
+          <div class="summe"><dt>Fertige Webseite</dt><dd>99 €</dd></div>
+          <div><dt>Ein ganzes Jahr online</dt><dd>inklusive</dd></div>
+          <div><dt>Einbau Ihrer Karte &amp; Fotos</dt><dd>inklusive</dd></div>
+          <div><dt>Zahlung erst nach „Passt so“</dt><dd>ohne Vorkasse</dd></div>
+        </dl>
+        <p class="folgejahr">Ab dem 2. Jahr 39 € pro Jahr, oder Sie erhalten alle Dateien kostenlos zur freien Verfügung.</p>
+        <p class="loesch">Ohne Antwort löschen wir diesen Entwurf automatisch am 18. Dezember 2026.</p>
+        <a class="knopf knopf--voll" href="mailto:kontakt@example.org?subject=Ja%2C%20ich%20m%C3%B6chte%20diese%20Seite%20%28Code%20C2NJ8YRQ%29">Ja, ich möchte diese Seite</a>
+
+        <div class="farbwahl">
+          <p>Lieber eine andere Farbstimmung? Tippen Sie auf ein Muster:</p>
+          <div class="farbmuster-reihe">
+            <a class="farbmuster farbmuster--ziegel" href="mailto:kontakt@example.org?subject=Andere%20Farbe%3A%20ziegel%20%28Code%20C2NJ8YRQ%29" aria-label="Farbe Ziegelrot wünschen"><span>Ziegel &amp; Oliv</span></a>
+            <a class="farbmuster farbmuster--salbei" href="mailto:kontakt@example.org?subject=Andere%20Farbe%3A%20salbei%20%28Code%20C2NJ8YRQ%29" aria-label="Farbe Salbeigrün wünschen"><span>Salbei &amp; Sand</span></a>
+            <a class="farbmuster farbmuster--oliv" href="mailto:kontakt@example.org?subject=Andere%20Farbe%3A%20oliv_nacht%20%28Code%20C2NJ8YRQ%29" aria-label="Farbe Oliv-Nacht wünschen"><span>Abendgold</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </article>
+</main>
+
+<footer class="fuss">
+  <p>Diese Seite ist ein unverbindlicher Entwurf des Webseiten-Service, nicht des Betriebs.</p>
+  <p><a href="#">Impressum</a> und <a href="#">Datenschutz</a> des Webseiten-Service</p>
+</footer>
+
+<script>
+(function () {
+  var namen = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  var monate = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+  var kurz = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+  var base = 480, span = 960; // 08:00 bis 24:00 Uhr
+  var z = {"1": [], "2": [], "3": [], "4": [], "5": [["09:00", "19:00"]], "6": [["10:00", "19:00"]], "0": [["10:00", "18:00"]]};
+  var marketingTexte = {
+    v1: "Die Casa Fiorentina wird besonders geschätzt für:",
+    v2: "Bei unseren Gästen besonders beliebt:",
+    v3: "Wofür Gäste die Casa Fiorentina schätzen:"
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var simTag = params.get("simTag");
+  var simZeit = params.get("simZeit");
+
+  function setVariante(v) {
+    if (!["v1","v2","v3"].includes(v)) v = "v2";
+    document.documentElement.setAttribute("data-variante", v);
+    var img = document.getElementById("illu-img");
+    img.src = v === "v1" ? "illustration.webp" : ("illustration_" + v + ".webp");
+    document.getElementById("marketing-titel").textContent = marketingTexte[v];
+    Array.prototype.forEach.call(document.querySelectorAll("[data-set-var]"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-set-var") === v ? "true" : "false");
+    });
+  }
+  if (params.get("variante")) setVariante(params.get("variante"));
+  Array.prototype.forEach.call(document.querySelectorAll("[data-set-var]"), function (b) {
+    b.onclick = function () { setVariante(b.getAttribute("data-set-var")); };
+  });
+
+  var fmt = new Intl.DateTimeFormat("en-US", {timeZone: "Europe/Berlin", year: "numeric", month: "numeric", day: "numeric", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"});
+  function berlin(jetzt) {
+    if (simTag !== null && simZeit) {
+      var sp = simZeit.split(":");
+      return {j: 2026, mo: 11, d: 22, t: +simTag, m: (+sp[0]) * 60 + (+sp[1]), uhr: simZeit};
+    }
+    var w = {};
+    fmt.formatToParts(jetzt).forEach(function (p) { w[p.type] = p.value; });
+    var hh = String(+w.hour % 24).padStart(2, "0");
+    var mm = String(+w.minute).padStart(2, "0");
+    return {j: +w.year, mo: +w.month, d: +w.day, t: kurz[w.weekday], m: (+w.hour % 24) * 60 + +w.minute, uhr: hh + ":" + mm};
+  }
+  function min(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  function findeNaechsteOeffnung(t) {
+    var n = 1;
+    while (n <= 7 && !z[(t + n) % 7].length) n++;
+    var zielTag = (t + n) % 7;
+    var fenster = z[zielTag][0];
+    var tagWort = n === 1 ? ("morgen (" + namen[zielTag] + ")") : ("am " + namen[zielTag]);
+    return {tagWort: tagWort, tagName: namen[zielTag], von: fenster[0], bis: fenster[1]};
+  }
+
+  function zeige() {
+    var b = berlin(new Date()), t = b.t, m = b.m, heute = z[t];
+    var badge = document.getElementById("status-badge");
+    var jetztEl = document.getElementById("jetzt");
+    var naechsteEl = document.getElementById("naechste-info");
+    var karteEl = document.getElementById("status-karte");
+    var leiste = document.getElementById("leiste");
+    var bahn = document.getElementById("bahn");
+
+    document.getElementById("tag").textContent = namen[t] + ", " + b.d + ". " + monate[b.mo - 1];
+    document.getElementById("uhr-jetzt").textContent = b.uhr + " Uhr";
+
+    if (!heute.length) {
+      var naechst = findeNaechsteOeffnung(t);
+      badge.textContent = "HEUTE RUHETAG";
+      badge.className = "status-badge status-badge--zu";
+      karteEl.setAttribute("data-status", "zu");
+      jetztEl.textContent = "Heute geschlossen";
+      naechsteEl.textContent = "Öffnet wieder " + naechst.tagWort + " um " + naechst.von + " Uhr (bis " + naechst.bis + " Uhr).";
+      naechsteEl.hidden = false;
+      leiste.hidden = true;
+    } else {
+      var offen = heute.filter(function (f) { return m >= min(f[0]) && m < min(f[1]); })[0];
+      var spaeterHeute = heute.filter(function (f) { return m < min(f[0]); })[0];
+      if (offen) {
+        badge.textContent = "JETZT GEÖFFNET";
+        badge.className = "status-badge status-badge--offen";
+        karteEl.setAttribute("data-status", "offen");
+        jetztEl.textContent = "Heute noch bis " + offen[1] + " Uhr für Sie geöffnet";
+        naechsteEl.textContent = "Heutige Öffnungszeit: " + offen[0] + " bis " + offen[1] + " Uhr";
+        naechsteEl.hidden = false;
+      } else if (spaeterHeute) {
+        badge.textContent = "ÖFFNET HEUTE";
+        badge.className = "status-badge status-badge--bald";
+        karteEl.setAttribute("data-status", "bald");
+        jetztEl.textContent = "Gerade noch geschlossen";
+        naechsteEl.textContent = "Öffnet heute um " + spaeterHeute[0] + " Uhr (geöffnet bis " + spaeterHeute[1] + " Uhr).";
+        naechsteEl.hidden = false;
+      } else {
+        var morgenInfo = findeNaechsteOeffnung(t);
+        badge.textContent = "FEIERABEND";
+        badge.className = "status-badge status-badge--zu";
+        karteEl.setAttribute("data-status", "zu");
+        jetztEl.textContent = "Heute bereits geschlossen (war bis " + heute[heute.length - 1][1] + " Uhr offen)";
+        naechsteEl.textContent = "Öffnet wieder " + morgenInfo.tagWort + " um " + morgenInfo.von + " Uhr.";
+        naechsteEl.hidden = false;
+      }
+      bahn.textContent = "";
+      heute.forEach(function (f) {
+        var i = document.createElement("i");
+        var start = Math.max(0, min(f[0]) - base);
+        var ende = Math.min(span, min(f[1]) - base);
+        i.style.setProperty("--a", start);
+        i.style.setProperty("--b", ende);
+        i.textContent = f[0] + " bis " + f[1];
+        bahn.appendChild(i);
+      });
+      var pos = Math.max(0, Math.min(span, m - base));
+      var s = document.createElement("b");
+      s.style.setProperty("--a", pos);
+      s.setAttribute("title", "Aktuelle Uhrzeit: " + b.uhr + " Uhr");
+      bahn.appendChild(s);
+      leiste.hidden = false;
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll(".karte div[data-tag]"), function (r) {
+      var ja = r.getAttribute("data-tag") == t;
+      r.className = ja ? "heute" : "";
+      if (ja) r.setAttribute("aria-current", "date"); else r.removeAttribute("aria-current");
+    });
+  }
+  zeige();
+  setInterval(zeige, 30000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) zeige(); });
+})();
+</script>
+</body>
+</html>
